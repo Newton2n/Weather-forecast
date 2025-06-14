@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Weather</title>
+</head>
+
+<body>
+  <div id="outside">
+  <main id="main-container">
+    <div id="left">
+      <span class="logo">
+        <img src="icon-img/umbrella (1).png" alt="logo">
+      </span>
+      <span class="icon_box_left">
+        <i class="icon_left fa-solid fa-cloud-meatball current_dom"></i>
+        <p class=" current_dom">Weather</p>
+      </span>
+      <span class="icon_box_left">
+        <i class="icon_left fa-solid fa-list"></i>
+        <p>Cities</p>
+      </span>
+      <span class="icon_box_left">
+        <i class="icon_left fa-solid fa-map-location-dot"></i>
+        <p>Map</p>
+      </span>
+      <span class="icon_box_left icon_last">
+        <i class="icon_left fa-solid fa-gears"></i>
+        <p>Setting</p>
+      </span>
+     <!-- <i class="fa-solid fa-bars top_menu" hidden></i> -->
+    </div>
+    <div id="middle">
+      <div id="top">
+     <div id="input_search"><input id="search" type="text" placeholder="search for cities"> <button id="search_button">search</button></div>   
+        <div id="city">
+          <div id="city_first_side">
+            <ul>
+              <li id="city_name">...</li>
+              <li id="chance_rain" class="all">..</li>
+            </ul>
+            <p id="temp" class="all">..</p>
+          </div>
+          <div id="city_second_side">
+            <img id="current_w_img" class="img_all" >
+          </div>
+        </div>
+      </div>
+      <div id="second">
+        <div id="f">
+          <p>Today's forecast</p>
+        </div>
+        <div id="Today_forecast_box">
+          <div class="f_cont">
+            <p class="hour">.</p>
+            <img class="weather_img img_all" >
+            <p class="hour_temp all">..</p>
+          </div>
+          <div class="f_cont">
+            <p class="hour">.</p>
+            <img class="weather_img img_all">
+            <p class="hour_temp all">..</p>
+          </div>
+          <div class="f_cont">
+            <p class="hour">.</p>
+            <img class="weather_img img_all">
+            <p class="hour_temp all">..</p>
+          </div>
+          <div class="f_cont">
+            <p class="hour">.</p>
+            <img class="weather_img img_all" >
+            <p class="hour_temp all">..</p>
+          </div>
+          <div class="f_cont">
+            <p class="hour">.</p>
+            <img class="weather_img img_all">
+            <p class="hour_temp all">..</p>
+          </div>
+          <div class="f_cont">
+            <p class="hour">.</p>
+            <img class="weather_img img_all">
+            <p class="hour_temp all">..</p>
+          </div>
+        </div>
+      </div>
+      <div id="bottom">
+        <div id="bottom_top">
+          <p id="air">AIR CONDITION</p>
+          <span id="seeMoreBox"> <button id="seeMore">See more</button></span>
+        </div>
+        <div id="bottom_down">
+          <div id="bottom_down_left">
+            <ul>
+              <li class="air_headline"><i class="air_headline fa-solid fa-temperature-quarter"></i> Real Feels</li>
+              <li class="air_desc all" id="tday_feels">...</li>
+            </ul>
+            <ul>
+              <li class="air_headline"><i class="air_headline fa-solid fa-droplet"></i> Chance Of Rain</li>
+              <li class="air_desc all" id="chance_rain_second">...</li>
+            </ul>
+          </div>
+          <div id="bottom_down_right">
+            <ul>
+              <li class="air_headline"><i class="air_headline fa-solid fa-wind"></i> Wind </li>
+              <li class="air_desc all" id="tday_wind">...</li>
+            </ul>
+            <ul>
+              <li class="air_headline"><i class="air_headline fa-solid fa-sun"></i> UV Index</li>
+              <li class="air_desc all" id="uv_index">...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="right">
+      <p id="s">7 Days Forecast</p>
+      <div id="Seven_d_fcast_container">
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name">
+            <img class="Seven_d_img img_all" id="first_img">
+            <p class="n bold all">..</p>
+          </span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name">
+            <img class="Seven_d_img img_all">
+            <p class="n  bold all">..</p>
+          </span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name"><img class="Seven_d_img img_all">
+            <p class="n bold all">..</p>
+          </span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name"><img class="Seven_d_img img_all">
+            <p class="n bold all">..</p>
+          </span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name"><img class="Seven_d_img img_all">
+        <p class="n bold all">..</p></span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name"><img class="Seven_d_img  img_all">
+            <p class="n bold all">..</p>
+          </span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+        <div class="Seven_d_fcast_box">
+          <span class="n days all">..</span>
+          <span class="seven_d_img_name"><img class="Seven_d_img  img_all">
+            <p class="n bold all">..</p>
+          </span>
+          <span class="n temp_forecast all">...</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
