@@ -107,15 +107,15 @@ async function weather_search(city_name) {
       element.value = hour_6_rain[index];
 
       if (element.value <= 5) {
-        element.src = "/icon-img/weather_img/sun.png";
+        element.src = "icon-img/weather_img/sun.png";
       } else if (element.value <= 48) {
-        element.src = "/icon-img/weather_img/sun and rain.png";
+        element.src = "icon-img/weather_img/sun and rain.png";
       } else if (element.value <= 80) {
-        element.src = "/icon-img/weather_img/rain.png";
+        element.src = "icon-img/weather_img/rain.png";
       } else if (element.value <= 86) {
-        element.src = "/icon-img/weather_img/snow.png";
+        element.src = "icon-img/weather_img/snow.png";
       } else if (element.value > 95) {
-        element.src = "/icon-img/weather_img/thunder.png";
+        element.src = "icon-img/weather_img/thunder.png";
       }
     });
 
@@ -140,19 +140,19 @@ async function weather_search(city_name) {
 
       const forecast_text = forecast_elem[index];
       if (element.value <= 5) {
-        element.src = "/icon-img/weather_img/sun.png";
+        element.src = "icon-img/weather_img/sun.png";
         forecast_text.innerText = "sunny";
       } else if (element.value <= 48) {
-        element.src = "/icon-img/weather_img/sun and rain.png";
+        element.src = "icon-img/weather_img/sun and rain.png";
         forecast_text.innerText = "cloudy";
       } else if (element.value <= 80) {
-        element.src = "/icon-img/weather_img/rain.png";
+        element.src = "icon-img/weather_img/rain.png";
         forecast_text.innerText = "Rainy";
       } else if (element.value <= 86) {
-        element.src = "/icon-img/weather_img/snow.png";
+        element.src = "icon-img/weather_img/snow.png";
         forecast_text.innerText = "Snow";
       } else if (element.value >= 95) {
-        element.src = "/icon-img/weather_img/thunder.png";
+        element.src = "icon-img/weather_img/thunder.png";
         forecast_text.innerText = "Thunder";
       }
     });
