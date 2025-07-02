@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+:root{
+  --outside-inside-div-background:royalblue;
+  --main-background:#fff;
+  --div-background:rgb(238, 238, 238);
+  --text-color: rgb(185, 185, 185);
+  --text-hover:rgb(69, 69, 69);
+  --bold-text:#000;
+  --button-inside-text:#fff;
+  --button-hover-color:rgb(93, 123, 214);
+}
+.dark{
+  --outside-inside-div-background:#742525;
+  --main-background:#2a2a2a;
+  --div-background:#444444;
+  --text-color: #EDEDED;
+  --text-hover:#ededed;
+  --bold-text:#ffffff;
+  --button-inside-text:#fff;
+  --button-hover-color:#570116;
+}
 * {
   padding: 0;
   margin: 0;
@@ -22,12 +42,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color:var(--main-background);
 }
 #outside{
   height: 100vh;
   width: 100vw;
-  background-color: royalblue;
+  background-color: var(--outside-inside-div-background);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,13 +56,13 @@ body {
  #outside{
     height: 100%;
   width: 100%;
-  background-color:rgb(255, 255, 255) ;
+  background-color:var(--main-background);
  }
 }
 #main-container {
   height: 90vh;
   width: 70vw;
-  background-color: rgb(255, 255, 255);
+  background-color:var(--main-background);
   display: grid;
   grid-template-columns: 10% 60% 30%;
   grid-template-rows:100%;
@@ -65,7 +85,7 @@ body {
  
 }
 #left {
-  background-color: rgb(238, 238, 238);
+  background-color:var(--div-background);
   border-radius: 12px;
   
   display: flex;
@@ -96,7 +116,7 @@ body {
 }
 #right {
   border-radius: 12px;
-  background-color: rgb(238, 238, 238);
+  background-color:var(--div-background);
 }
 @media screen and (max-width: 620px){
   #right {
@@ -123,17 +143,18 @@ body {
 }
 
 .icon_box_left {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 15px;
   cursor: pointer;
-  color: rgb(185, 185, 185);
+  color:var(--text-color);
 }
 
 .icon_box_left:hover {
-  color: rgb(69, 69, 69);
+  color: var(--text-hover);
 }
 .icon_left {
   font-size: 0.6em;
@@ -141,13 +162,13 @@ body {
 .icon_left:hover {
   scale: 1.1;
 }
-.icon_box_left :nth-child(2) {
+.left_icon_name {
   font-size: 0.6em;
 
   letter-spacing: 0.7px;
   margin-top: 7px;
 }
-.icon_box_left :nth-child(2):hover {
+.left_icon_name:hover {
   font-weight: 700;
 }
 /* left side end */
@@ -166,24 +187,25 @@ body {
 #search {
   width: 80%;
   height: 100%;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--div-background);
   outline: none;
   border-radius: 4px;
   font-size: 0.7em;
   padding-left: 1em;
+  color: var(--bold-text);
 }
 #search_button{
   width: 20%;
   height: 90%;
-  color:white;
-  background-color: royalblue;
+  color:var(--button-inside-text);
+  background-color: var(--outside-inside-div-background);
   margin-left: 3px;
   border-radius: 6px;
 
   cursor: pointer;
 }
 #search_button:hover{ 
- background-color: rgb(93, 123, 214);
+ background-color:var(--button-hover-color);
 }
 #city {
   width: 100%;
@@ -208,14 +230,16 @@ body {
   margin-bottom: 2px;
   font-size: 1.2em;
   font-weight: 600;
+  color:var(--bold-text);
 }
 #chance_rain {
   font-size: 0.6em;
   margin-left: 1px;
-  color: rgb(185, 185, 185);
+  color:var(--text-color);
 }
 #temp {
   font-size: 1.8em;
+  color:var(--bold-text);
 }
 #city_second_side {
   margin-right: 15px;
@@ -228,14 +252,14 @@ body {
 #second {
   height: 25%;
   width: 100%;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--div-background);
   /* border: 1px black solid; */
   border-radius: 14px;
 }
 #f {
   height: 15%;
   width: 100%;
-  color: rgb(185, 185, 185);
+  color: var(--text-color);
 }
 #f :nth-child(1) {
   margin-top: 5px;
@@ -247,7 +271,7 @@ body {
   height: 65%;
   width: 100%;
   display: flex;
-  /* background-color: aqua; */
+  
   justify-content: space-between;
 }
 #Today_forecast_box :nth-child(6) {
@@ -265,7 +289,7 @@ body {
 .hour {
   margin-top: 5px;
   font-size: 0.7em;
-  color: rgb(185, 185, 185);
+  color: var(--text-color);
 }
 .weather_img {
   margin-top: 5px;
@@ -280,7 +304,7 @@ body {
 #bottom {
   height: 30%;
   width: 100%;
-  background-color: rgb(238, 238, 238);
+  background-color: var(--div-background);
 
   border-radius: 14px;
 }
@@ -295,17 +319,21 @@ body {
   font-size: 0.7em;
   font-weight: 600;
   margin-left: 6%;
+  color:var(--bold-text);
 }
 #seeMoreBox {
   margin-right: 6%;
 }
 #seeMore {
   font-size: 0.48em;
-  background-color: royalblue;
+  background-color:var(--outside-inside-div-background);
   border-radius: 5px;
   padding: 3px;
-  color: white;
+  color: var(--button-inside-text);
   cursor: pointer;
+}
+#seeMore:hover{
+  background-color: var(--button-hover-color);
 }
 #bottom_down {
   height: 70%;
@@ -333,7 +361,7 @@ body {
 .air_headline {
   font-size: 0.6em;
   list-style: none;
-  color: rgb(185, 185, 185);
+  color:var(--text-color);
 }
 .air_desc {
   list-style: none;
@@ -357,6 +385,7 @@ body {
   font-size: .8em;
   margin-left: 1em;
   margin-top: 1em;
+  color: var(--bold-text);
 }
 .Seven_d_fcast_box {
   display: flex;
@@ -375,10 +404,10 @@ body {
 .n {
   font-size: 0.6em;
   margin-left: 5px;
-  color: rgb(185, 185, 185);
+  color:var(--text-color);
 }
 .bold {
-  color: black;
+  color:var(--bold-text);
   font-weight: 600;
 }
 
@@ -386,5 +415,16 @@ body {
 
 .current_dom{
   font-weight: 600;
-  color: black;
+  color: var(--bold-text);
 }
+.all{
+  color: var(--bold-text);
+}
+.hidden1{
+  display: none;
+ }
+ .toggle_button{
+  color: var(--text-color);
+  background-color: var(--div-background);
+  font-size: 1.4rem;
+ }
